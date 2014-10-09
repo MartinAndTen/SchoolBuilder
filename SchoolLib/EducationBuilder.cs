@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SchoolLib
 {
-    public class EducationBuilder
+    public abstract class EducationBuilder
     {
     }
 }
