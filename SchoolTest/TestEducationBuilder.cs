@@ -5,7 +5,7 @@ using SchoolLib;
 namespace SchoolTest
 {
     [TestClass]
-    public class TestEducationBuilder : IEducation
+    public class TestEducationBuilder
     {
         [TestMethod]
         public void JensenBuilderTest()
@@ -13,35 +13,30 @@ namespace SchoolTest
             //Arrange
             JensenBuilder builder = new JensenBuilder();
             JensenDirector director = new JensenDirector();
-            IEducation.
+            IEducation expected = new Education();
+            expected.Teacher = "JensenLärare";
+            expected.Feedback = "Blä";
+            expected.Students = "Bosse";
             //Act
             IEducation actual = director.Build(builder);
             //Assert
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
         public void NackaBuilderTest()
         {
             //Arrange
-
-            //Actual
-
+            NackademinBuilder builder = new NackademinBuilder();
+            NackademinDirector director = new NackademinDirector();
+            IEducation expected = new Education();
+            expected.Teacher = "Mattias";
+            expected.Feedback = "Bra";
+            expected.Students = "Martin, Hans, Martin";
+            //Act
+            IEducation actual = director.Build(builder);
             //Assert
-        }
-
-        public string Teacher
-        {
-            get { return "Mattias"; }
-        }
-
-        public string Students
-        {
-            get { return "Martin, Hans, Martin"; }
-        }
-
-        public string Feedback
-        {
-            get { return "Bra"; }
+            Assert.AreEqual(expected, actual);
         }
     }
 }

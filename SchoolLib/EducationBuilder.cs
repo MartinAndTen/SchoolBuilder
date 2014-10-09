@@ -8,11 +8,10 @@ namespace SchoolLib
 {
     public abstract class EducationBuilder
     {
-        public abstract IEducation Education { get; }
+        public abstract IEducation Education { get; set; }
 
         public virtual void AssignTeacher()
         {
-
         }
 
         public virtual void InviteStudents()

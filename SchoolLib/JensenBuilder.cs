@@ -17,6 +17,12 @@ namespace SchoolLib
         public override void ProcessStudentFeedBack()
         {
         }
+
+        public override IEducation Education
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
+        }
     }
 }
 

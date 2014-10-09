@@ -6,19 +6,39 @@ using System.Threading.Tasks;
 
 namespace SchoolLib
 {
-    class NackademinBuilder : EducationBuilder
+    public class NackademinBuilder : EducationBuilder
     {
-        private abstractEducation educationInProgress;
+        private Education educationInProgress;
 
-        public override void AssignTeacher(IEducation education)
+        public NackademinBuilder()
         {
-            educationInProgress = education.EducationInProgress;
+
         }
+
+        public NackademinBuilder(Education education)
+        {
+            educationInProgress = education;
+        }
+
+        public override void AssignTeacher()
+        {
+            educationInProgress.Teacher = "Mattias";
+        }
+
         public override void InviteStudents()
         {
+            educationInProgress.Students = "Martin, Hans, Martin";
         }
+
         public override void ProcessStudentFeedBack()
         {
+            educationInProgress.Feedback = "Bra";
+        }
+
+        public override IEducation Education
+        {
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
     }
 }

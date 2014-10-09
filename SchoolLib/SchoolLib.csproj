@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="abstractEducation.cs" />
+    <Compile Include="Education.cs" />
     <Compile Include="EducationBuilder.cs" />
     <Compile Include="EducationDirector.cs" />
     <Compile Include="IEducation.cs" />

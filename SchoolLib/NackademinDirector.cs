@@ -10,7 +10,10 @@ namespace SchoolLib
     {
         public override IEducation Build(EducationBuilder builder)
         {
-
+            builder.AssignTeacher();
+            builder.InviteStudents();
+            builder.ProcessStudentFeedBack();
+            return builder.Education;
         }
     }
 }
