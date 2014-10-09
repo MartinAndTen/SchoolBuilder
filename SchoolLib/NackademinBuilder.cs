@@ -8,17 +8,12 @@ namespace SchoolLib
 {
     public class NackademinBuilder : EducationBuilder
     {
-        private IEducation educationInProgress;
+        private IEducation educationInProgress = new Education();
 
-        public NackademinBuilder()
-        {
-
-        }
-
-        public NackademinBuilder(IEducation education)
-        {
-            educationInProgress = education;
-        }
+        //public NackademinBuilder(IEducation education)
+        //{
+        //    educationInProgress = education;
+        //}
 
         public override void AssignTeacher()
         {

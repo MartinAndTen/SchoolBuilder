@@ -8,38 +8,30 @@ namespace SchoolLib
 {
     public class JensenBuilder : EducationBuilder
         {
-        private IEducation educationInProgress;
-
-        public JensenBuilder()
-        {
-
-        }
-
-        public JensenBuilder(IEducation education)
-        {
-            educationInProgress = education;
-        }
+        private IEducation educationInProgress = new Education();
 
         public override void AssignTeacher()
         {
-            educationInProgress.Teacher = "Mattias";
+            educationInProgress.Teacher = "Lars";
         }
 
         public override void InviteStudents()
         {
-            educationInProgress.Students = "Martin, Hans, Martin";
+            educationInProgress.Students = "Bosse";
         }
 
         public override void ProcessStudentFeedBack()
         {
-            educationInProgress.Feedback = "Bra";
+            educationInProgress.Feedback = "Konstig";
         }
+
 
         public override IEducation Education
         {
             get { return educationInProgress; }
             set { Education = value; }
         }
+
     }
 }
 

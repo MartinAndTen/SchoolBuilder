@@ -10,38 +10,20 @@ namespace SchoolLib
     {
         public string Teacher
         {
-            get
-            {
-                return Teacher;
-            }
-            set
-            {
-                Teacher = value;
-            }
+            get;
+            set;
         }
 
         public string Students
         {
-            get
-            {
-                return Students;
-            }
-            set
-            {
-                Teacher = value;
-            }
+            get;
+            set;
         }
 
         public string Feedback
         {
-            get
-            {
-                return Feedback;
-            }
-            set
-            {
-                Feedback = value;
-            }
+            get;
+            set;
         }
     }
 }

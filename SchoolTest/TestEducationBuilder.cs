@@ -13,14 +13,15 @@ namespace SchoolTest
             //Arrange
             JensenBuilder builder = new JensenBuilder();
             JensenDirector director = new JensenDirector();
-            IEducation expected = new Education();
-            expected.Teacher = "JensenLärare";
-            expected.Feedback = "Blä";
-            expected.Students = "Bosse";
+            string expectedTeacher = "Lars";
+            string expectedFeedback = "Konstig";
+            string expectedStudents = "Bosse";
             //Act
             IEducation actual = director.Build(builder);
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expectedTeacher, actual.Teacher);
+            Assert.AreEqual(expectedStudents, actual.Students);
+            Assert.AreEqual(expectedFeedback, actual.Feedback);
         }
 
         [TestMethod]
@@ -29,14 +30,15 @@ namespace SchoolTest
             //Arrange
             NackademinBuilder builder = new NackademinBuilder();
             NackademinDirector director = new NackademinDirector();
-            IEducation expected = new Education();
-            expected.Teacher = "Mattias";
-            expected.Feedback = "Bra";
-            expected.Students = "Martin, Hans, Martin";
+            string expectedTeacher = "Mattias";
+            string expectedFeedback = "Bra";
+            string expectedStudents = "Martin, Hans, Martin";
             //Act
             IEducation actual = director.Build(builder);
             //Assert
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expectedTeacher, actual.Teacher);
+            Assert.AreEqual(expectedStudents, actual.Students);
+            Assert.AreEqual(expectedFeedback, actual.Feedback);
         }
     }
 }
