@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abstractEducation.cs" />
     <Compile Include="EducationBuilder.cs" />
     <Compile Include="EducationDirector.cs" />
+    <Compile Include="IEducation.cs" />
     <Compile Include="JensenClient.cs" />
     <Compile Include="NackademinClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

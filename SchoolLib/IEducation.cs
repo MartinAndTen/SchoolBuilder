@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace SchoolLib
 {
-    public class EducationDirector
+    public interface IEducation
     {
-        public EducationBuilder Build(IEducation education)
-        {
-            return builder;
-        }
+         abstractEducation EducationInProgress { get; }
     }
 }

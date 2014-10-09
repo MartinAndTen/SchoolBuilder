@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace SchoolLib
 {
-    class NackademinClient
+    class NackademinClient : EducationBuilder
     {
+        private abstractEducation educationInProgress;
+
+        public override string AssignTeacher()
+        {
+            return "Mattias";
+        }
+        public override string InviteStudents()
+        {
+            return "Martin, Martin, Hasse";
+        }
+        public override string ProcessStudentFeedBack()
+        {
+            return "Bra";
+        }
     }
 }
