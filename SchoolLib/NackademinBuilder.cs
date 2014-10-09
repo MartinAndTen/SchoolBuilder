@@ -8,14 +8,14 @@ namespace SchoolLib
 {
     public class NackademinBuilder : EducationBuilder
     {
-        private Education educationInProgress;
+        private IEducation educationInProgress;
 
         public NackademinBuilder()
         {
 
         }
 
-        public NackademinBuilder(Education education)
+        public NackademinBuilder(IEducation education)
         {
             educationInProgress = education;
         }
@@ -37,8 +37,8 @@ namespace SchoolLib
 
         public override IEducation Education
         {
-            get { throw new NotImplementedException(); }
-            set { throw new NotImplementedException(); }
+            get { return educationInProgress; }
+            set { Education = value; }
         }
     }
 }
