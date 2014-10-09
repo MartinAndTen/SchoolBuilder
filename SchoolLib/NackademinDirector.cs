@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace SchoolLib
 {
-    public abstract class EducationDirector
+    public class NackademinDirector : EducationDirector
     {
-        public abstract IEducation Build(EducationBuilder builder);
+        public override IEducation Build(EducationBuilder builder)
+        {
+
+        }
     }
 }

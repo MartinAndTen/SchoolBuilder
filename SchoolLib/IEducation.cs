@@ -8,6 +8,8 @@ namespace SchoolLib
 {
     public interface IEducation
     {
-         abstractEducation EducationInProgress { get; }
+         string Teacher { get; }
+         string Students { get; }
+         string Feedback { get; }
     }
 }

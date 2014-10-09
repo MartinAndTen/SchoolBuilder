@@ -7,6 +7,9 @@ namespace SchoolLib
 {
     public abstract class abstractEducation
     {
+        public abstractEducation(IEducation education)
+        {
 
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace SchoolLib
 
         public virtual void AssignTeacher()
         {
+
         }
 
         public virtual void InviteStudents()
